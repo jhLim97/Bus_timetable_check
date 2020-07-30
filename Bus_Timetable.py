@@ -14,7 +14,7 @@ class MyWindow(QMainWindow, UI_FORM):
 
     def get_number_and_timetable(self):
         Bus_number = self.lineEdit.text()
-        browser = wd.Chrome('[파일경로]/chromedriver.exe') #권한 거부 오류 시 실행파일명까지 쓰면 실행됨.
+        browser = wd.Chrome('[파일경로]/chromedriver.exe') #파일경로 부분은 본인이 chromegriver설치한 경로. 권한 거부 오류 시 실행파일명까지 쓰면 실행됨.
         url = "http://bus.jeju.go.kr/schedule/view/" + Bus_number
         browser.get(url)
 
